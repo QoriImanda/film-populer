@@ -32,7 +32,245 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.sticky .navbar{
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.6);
+  background-color: black;
+  transition: 0.5s;
+}
+
+.navbar{
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: none;
+  transition: 0.5s;
+}
+
+
+
+
+
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.height {
+  height: 380px;
+
+}
+
+.lebar {
+  width: 100%;
+}
+
+.bg-warna {
+  background-color: #dfdfdf;
+}
+
+.card {
+  width: 20rem;
+  animation: scaledown 0.4s linear;
+  animation-fill-mode: forwards;
+}
+
+.btn-group-ee {
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  z-index: 100;
+  animation: scale 0.4s linear;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes scaledown {
+  0%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale{
+  0%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100%{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.card-body {
+  height: 220px;
+  text-align: left;
+}
+
+.card-body p {
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card-body h5 {
+  height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+
+
+.margin {
+  position: relative;
+  margin: 20px;
+  margin-top: 40px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+
+.header-img {
+  background-image: url("https://image.tmdb.org/t/p/w500//aHFq9NMhavOL0jtQvmHQ1c5e0ya.jpg");
+  background-position: center;
+  
+}
+
+
+.header-judul {
+  color: white;
+  height: 70vh;
+  background-color: #000000;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.animasi{
+  animation: setAnimasi 1s ease reverse;
+}
+
+@keyframes setAnimasi {
+   0%{
+
+   }
+   100%{
+    transform: translatey(320px);
+   } 
+} 
+
+.title-header {
+  font-size: 100px;
+}
+
+.descp {
+  font-size: 50px;
+}
+
+.sekat {
+  font-size: 38px;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .card-body {
+    height: 0px;
+    padding: 0;
+    text-align: left;
+  }
+
+  .card-body p {
+    visibility: hidden;
+  }
+
+  .card-body small {
+    visibility: hidden;
+  }
+
+  .card-title {
+    visibility: hidden;
+  }
+
+  .margin {
+    position: relative;
+    margin: 0;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+
+  .font-responsive {
+    font-size: 24px;
+  }
+
+  .Swiper-responsive{
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .header-judul {
+    color: white;
+    height: 60vh;
+    background-color: #000000;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .show{
+    background-color: rgb(212, 212, 212);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    color: black;
+    animation: opacity 0.5s ease;
+  }
+
+  .navbar-nav li a{
+    color: black;
+  }
+  
+  .navbar-nav li a:hover{
+    color: rgb(0, 0, 0);
+    transform: scale(98%);
+    transition: 1s;
   }
 }
